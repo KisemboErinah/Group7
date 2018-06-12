@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 chess <- read.csv("players.csv",TRUE,",") #obtain the dataset
 
 #plot number of games played against year of birth
@@ -18,7 +18,6 @@ pre <- data.frame(chess$B.YEAR <- 1999)
 var<-predict(relationship,pre)
 print(var)
 
-=======
 
 chess <- read.csv("players.csv",TRUE,",") #obtain the dataset
 
@@ -47,5 +46,5 @@ abline(lm(chess$GAMES~chess$B.YEAR))
 pre<-data.frame(chess$B.YEAR=1974)
 var<-lm(chess$GAMES~chess$B.YEAR)
 predict(var,pre)
->>>>>>> 670c2aef3e77a106711ae256054294878c234157
+
 
