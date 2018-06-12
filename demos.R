@@ -1,5 +1,5 @@
 
-chess <- read.csv("players.csv",TRUE,",") #obtain the dataset
+chess <- read.csv("players.csv",TRUE,",") #obtaining the dataset
 
 #plot number of games played against year of birth
 plot(chess$B.YEAR,chess$GAMES ,xlab = "year of birth", ylab="number of games", main="relationship between years and number of games played")
