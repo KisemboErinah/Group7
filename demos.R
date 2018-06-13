@@ -14,7 +14,7 @@ abline(lm(chess$GAMES~chess$B.YEAR))#draw the line of regression
 pre <- data.frame(chess$B.YEAR <- 1999)
 
 
-#predicting the number of games played given the year of birth
+#predict the number of games played given the year of birth
 var<-predict(relationship,pre)
 print(var)
 
