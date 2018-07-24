@@ -1,9 +1,11 @@
-chess <- read.csv("players.csv",TRUE,",")
-chess
-plot(chess$B.YEAR,chess$GAMES ,xlab = "year of birth", ylab="number of games", main="relationship between years and number of games played")
-lm(chess$GAMES~chess$B.YEAR)
-abline(lm(chess$GAMES~chess$B.YEAR))
-pre<-data.frame(chess$B.YEAR=1975)
-var<-lm(chess$GAMES~chess$B.YEAR)
-predict(var,pre)
+data("trees") #load data set trees
+View(trees) #have a look at the data set
+plot(Volume ~ Girth, data = trees, log = "xy") #plot scatter graph of Volume against Girth
+TreesModel <- lm(Volume ~ Girth, data = trees) #Evaluate the correlation between Girth and volume
+print(TreesModel)
+abline(TreesModel)
+summary(TreesModel)
 
+a <- data.frame(Girth = 15) #make a data frame of the predict function
+result <- predict(TreesModel,a) #predict function
+print(result)
